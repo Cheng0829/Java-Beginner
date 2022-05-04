@@ -1,0 +1,78 @@
+package hello;
+import java.util.Scanner;
+public class Hello {
+	public static void main(String[] args) {
+/**************************输入输出****************************************/
+		Scanner in = new Scanner(System.in);//定义扫描
+		String s;
+		final int num;//定义常量
+//		s = in.nextLine();//输入一行what is this,s为"what is this"
+//		s = in.next();//输入一行what is this,s为"what"
+//		num = in.nextInt();//定义变量,输入数字
+		
+//		System.out.println("2+"+num+"="+2+num);//输出"2+3=23"		
+//		System.out.println("2+"+num+"="+(2+num));//输出"2+3=5"
+/**************************if判断****************************************/
+		if(num>1)
+			System.out.println(">");
+		else if(num<1)
+			System.out.println("<");
+		else
+		{
+			System.out.println("=");
+			System.out.println("");
+		}
+/************************多路分支******************************************/
+		//
+		switch (num) {
+		case 1:
+			System.out.println("1");
+			break;
+		case 2:
+			System.out.println("2");
+			break;
+		default:
+			System.out.println("default");
+		}
+/**************************循环****************************************/
+		//循环1
+		while(1>0) 
+		{
+			break;
+		}
+		//循环2
+		do
+		{
+			System.out.println("");
+		}while(1==0);
+		//循环3
+		for(int i=1;i>=0;i--)
+		{
+			System.out.println("");
+		}
+/**************************布尔变量****************************************/
+		boolean a = true;//逻辑类型,即布尔类型
+		boolean b = false;
+		//System.out.println(!a); //a&&b,a||b
+/***************************数组***************************************/
+		int[] numbers = new int[3];//numbers[i]:i=0~2
+		int[] scores = {1, 2};
+		System.out.println(numbers.length+scores.length);
+		int[] new_numbers = new int[numbers.length];
+		for(int i=0; i<numbers.length; i++)
+			new_numbers[i] = numbers[i];//#数组赋值,只能循环不能直接让b=a
+		for(int k : numbers)
+			//遍历numbers数组元素,k即为各个元素
+			k = 2*k;//
+		int[][] two_numbers = new int[3][3];
+		int[][] two_scores = {{1,2,3},{4,5,6}};
+/***************************Math***************************************/
+		int i = Math.abs(-12);
+		double j = Math.round(12.45);
+		j = Math.random();//j=0~1
+		j = Math.pow(2, j);//2**j
+/***************************字符(串)***************************************/
+		char c = 'a';//c++即为'b','A'-'a'=32,
+		String d = "hello,world!";
+	}
+}

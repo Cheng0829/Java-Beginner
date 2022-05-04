@@ -1,0 +1,28 @@
+package clock;
+
+public class Display {
+	private int value = 0;
+	private int limit = 0;
+	
+	public Display(int limit) {
+		this.limit = limit;//???
+	}
+	
+	public void increase() {
+		value++;
+		if(value==limit)
+			value = 0;//归零
+	}
+	
+	public int getValue() {
+		return value;
+	}
+	
+	public static void main(String[] args) {
+		Display d = new Display(24);//24进制
+		for(;;) {//无限循环
+			d.increase();   
+			System.out.println(d.getValue());//最好用getValue而不是d.value,因为value是private,可能会不可视
+		}
+	}
+}

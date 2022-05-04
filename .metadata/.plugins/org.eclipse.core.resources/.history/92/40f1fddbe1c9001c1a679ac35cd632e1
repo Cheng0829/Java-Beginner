@@ -1,0 +1,13 @@
+package ssuper;
+
+public class Son {
+	public String son_title;
+	
+	public void test(String son_title) {
+		
+	}
+	public static void main(String[] args) {
+		test("1");
+	}
+
+}

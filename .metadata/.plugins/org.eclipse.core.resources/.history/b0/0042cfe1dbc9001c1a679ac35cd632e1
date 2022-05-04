@@ -1,0 +1,33 @@
+package clock;
+
+public class Display {
+	private int value = 0;
+	private int limit = 0;//private,只有在Display类里面才能访问
+	private static int step = 0;//不同对象的static变量值保持一致 ,调用时可以写作Display.step,而不需要是d.step
+	
+	//点击源码->使用字段生成构造函数,即可生成Display(相当于python的init),不必手动构造
+	public Display(int value, int limit) {
+		//与类同名,相当于python类中的init,this.limit相当于__init__.limit
+		super();
+		this.value = value;
+		this.limit = limit;
+	}
+
+	public void increase() {
+		value++;
+		if(value==limit)
+			value = 0;//归零
+	}
+	
+	public int getValue() {
+		return value;
+	}
+	
+	public static void main(String[] args) {
+		Display d = new Display(24);//24进制
+		for(;;) {//无限循环
+			d.increase();   
+			System.out.println(d.getValue());//最好用getValue而不是d.value,因为value是private,Display类之外不可视
+		}
+	}
+}

@@ -1,0 +1,18 @@
+package ssuper;
+
+public class Son {
+	public String son_title;
+	
+	public Son(String son_title) {
+		super();
+		this.son_title = son_title;
+	}
+	public void test(String son_title) {
+		System.out.printf(son_title);
+	}
+	public static void main(String[] args) {
+		Son tmp = new Son("2");
+		tmp.test("1");
+	}
+
+}
