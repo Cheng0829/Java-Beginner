@@ -1,3 +1,4 @@
+# Java Basic Codes and Notes
 **This project includes some Java codes and notes about Java basic knowledge.**
 
 The codes come from the lesson of Mr.WengKai named *[Java--From A Freshman To A Master](https://www.bilibili.com/video/BV1DJ411B7cG?spm_id_from=333.337.search-card.all.click)*
